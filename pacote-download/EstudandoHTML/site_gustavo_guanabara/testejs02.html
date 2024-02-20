@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JavaScript</title>
+    <script>
+        /*
+            () Parâmetros
+            {} Códigos
+        */
+        /*Uma função ou rotina é que vai acontecer caso eu dispare esta. Neste caso sera quando o usuario passar o mouse por cima*/
+        function acendeLampada()
+        {
+            /*  Nesta linha do codigo document.getElementById("luz"); eu fiz uma referencia a um elemento desta página pelo id, nesse caso luz da imagem da lampada apagada
+                o src é o caminho para a lampada acesa*/
+            document.getElementById("luz").src = "https://wchristianeletrotecnica.files.wordpress.com/2011/04/lmpada.jpg";
+            /*Aqui alteramos a estilização da imagem, mudando a largura e a altura*/
+            document.getElementById("luz").style = "width: 200px; height: 250px;";
+        }
+        function apagaLampada()
+        {
+            document.getElementById("luz").src = "https://www.starlux.com.br/wp-content/uploads/2019/05/2798_filamento_led_a19_apagada_starlux_principal.png";
+            document.getElementById("luz").style = "width: 250px; height: 250px;";
+        }
+        function quebraLampada()
+        {
+            document.getElementById("luz").src = "https://1.bp.blogspot.com/-SnSMdLFxrcw/Th3w1olo0oI/AAAAAAAAAD8/mlSzt0lWs3A/s1600/lampada_quebrada.jpg";        
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <!--onClick="acendeLampada" é on a ação a ser definida Click o evento que aciona a função acendeLampada ="acendeLampada", não sendo necessário o ponto e virgula
+        Há mais eventos do que o Click, como o mousemove que é quando passamos o mouse por cima-->
+    <img style="width: 250px; height: 250px;" src="https://www.starlux.com.br/wp-content/uploads/2019/05/2798_filamento_led_a19_apagada_starlux_principal.png" id="luz" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()">
+    <!--<img style="width: 200px; height: 250px;" src="https://wchristianeletrotecnica.files.wordpress.com/2011/04/lmpada.jpg">-->
+</body>
+</html>

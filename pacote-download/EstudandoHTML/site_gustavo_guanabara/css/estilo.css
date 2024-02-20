@@ -1,0 +1,332 @@
+@charset "UTF-8";
+/*A regra @charset especifica a codificação de caracteres utilizada na folha de estilo.*/
+
+/*Fonte do site da google.com/fonts chamda Titillium Web*/
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+/*Especificamos onde esta o arquivo e não é necessário o usuario ter, o navegador vai buscar o arquivo, instalar lo na hora de carregar o site*/
+@font-face{
+ font-family: 'fonteLogo';
+ src: url("../fontes/Computerfont.ttf");
+}
+
+body
+{
+    font-family: Arial, sans-serif;    
+    background-color: #dddddd;
+    color: rgba(0, 0, 0, 1);
+}
+
+div#interface 
+{
+    background-color: white;
+    width:1000px;
+    /*margem de cima, direita, baixo e esquerda respectivamente.
+    O auto serve para que o navegador tome conta da minha imagem da esquerda e da direita*/
+    margin: -20px auto 0px auto;
+    /*o box-shadow: 0px 0px 10px; serve para colocar uma sombra com o deslocamento lateral 0px, deslocamento vertical 0px espalhamento 10 px e a cor da sombra black*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,.5);
+    /*Caso seja o mesmo valor para todos os cantos, pode informar apenas uma vez*/
+    padding: 10px 10px 10px 10px;
+}
+
+p
+{
+    text-align: justify; 
+    text-indent: 50px;
+}
+
+a
+{
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+header#cabecalho
+{
+    /*borda de baixo border bottom de tamanho 1px da cor #606060 sólida(linha). Entretanto é possivel utilizar além de solid, o dashed que é tracejado e o dotted que é um pontilhado. Além de double caso queira uma maior enfâse*/
+    border-bottom: 1px #606060 solid;
+    height: 250px;
+    /*colocamos uma imagem como fundo e passamos como parâmetro no-repeat que é para não repetir, o deslocamento lateral que é o 0px e o deslocamento vertical que é 100px*/
+    background: url(../img/logo_google_glass_menor.jpg) no-repeat 0px 80px;
+}
+
+header#cabecalho h1
+{ 
+/*Para definir uma fonte padrão usa este trecho de código. Caso a primeira não exista, vai para a segunda e em ultimo caso vai para a terceira
+font-family: Arial, Helvetica, sans-serif;*/
+
+/*Para usar uma fonte que não é padrão, más originada de um pacote, então referenciamos aqui o seu nome enquanto no inicio do documento especificamos onde pode ser encontrada*/
+font-family: 'fonteLogo', Helvetica, sans-serif;
+font-size: 30pt;    
+color: #606060;
+/*text-shadow possui como valor inicial 1px de deslocamento, 1px de deslocamento vertical  mais um 1px de espalhamento para ficar bem clarinho. O rgba com os tres primeiros numeros para a cor preta e o ultimo .6 para 60% do canal alfa*/
+text-shadow:1px 1px 1px rgba(0, 0, 0,.6);
+padding: 0px;
+margin-bottom: 0px;
+}
+
+header#cabecalho h2
+{
+    /*Referencia a fonte que pegamos do google na parte superior do código*/
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    /*font-size: 15pt; o tamanho da fonte é quinze pontos*/
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho img#icone
+{
+    position: absolute;
+    left: 950px;
+    top:40px;
+}
+
+/* Formatação de imagens com legendas */
+/* Tudo o que for figure que seja de classe foto-legenda vai ter uma determinada formatação. Para usar o class deve usar a tag, ponto e depois o nome da classe. Esse é o padrão de referenciar no css. */
+figure.foto-legenda
+{
+    /*o position:relative; é usado para que valores como top ou left funcionem usado a divisão como referencia, enquanto o absolute o site.*/
+    position: relative;
+    /*borda de largura 8px, tipo de borda solid e a cor da borda*/
+    border: 8px solid white;
+    /*deslocamento horizontal da sombra de 1px, vertical de 1px, de espalhamento de 4px e a cor black*/
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img
+{
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption
+{
+    opacity: 0;
+    /*posição absoluta dentro do conteiner, ou seja, a borda branca*/
+    position: absolute;
+    top:0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+figure.foto-legenda:hover figcaption
+{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+nav#menu
+{
+    display: block;
+}
+
+/*FORMATAÇÃO DO MENU*/
+nav#menu ul
+{
+/*retira os marcadores*/    
+list-style: none;
+/*Todas letras ficam em caixa alta*/
+text-transform: uppercase;
+/*posição absoluta para que possa passar por cima dos documentos e ficar livre pelo site*/
+position: absolute;
+top: -40px;
+left: 400px;
+}
+
+nav#menu  li
+{
+/*ALINHAR OS ITENS EM UMA LINHA*/
+display: inline-block;
+background-color: #dddddd;
+/*espaçamento interno*/
+padding: 10px;
+/*espaçamento externo*/
+margin: 20px;
+transition: background-color 1s;
+}
+
+nav#menu li:hover
+{
+background-color: #606060;
+}
+
+nav#menu h1
+{
+display: none;    
+}
+
+nav#menu a
+{ 
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover
+{
+    color: white;
+    /*sublinha o texto*/
+    text-decoration: underline;
+}
+
+section#corpo
+{
+    /*Display block para ser mostrado como bloco*/
+    display: block;
+    width: 500px;
+    /*flutuar a esquerda*/
+    float: left;
+}
+
+article#noticia-principal h2
+{
+    font-size: 13pt;
+    color: #606060;
+    background: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1
+{
+    font-family: 'fonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+header#cabecalho-artigo h2
+{
+    font-size: 13pt;
+    color: #cecece;
+    background: #ffffff;
+    margin-bottom: 0px;
+}
+
+header#cabecalho-artigo h3
+{
+    font-size: 12px;
+    color: #606060;
+}
+
+.direita
+{
+    text-align: right;
+}
+
+table#tabelaspec
+{
+    border: 1px solid #606060;
+    /*Retirar espaço entre as celulas e a tabela*/
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+table#tabelaspec td
+{
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    /*Alinhamento vertical que aceita parametros como top, bottom ou o valor middle*/
+    vertical-align: middle;
+}
+
+table#tabelaspec td.ce
+{
+    color: #ffffff;
+    background-color: #606060;
+    /*O alinhamento vertical da classe sobrepõe a estilização da tag*/
+    vertical-align: top;
+    font-weight: bold;
+    text-align: right;
+}    
+
+table#tabelaspec td.cd
+{
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabelaspec td.NPlanejada
+{
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabelaspec caption
+{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabelaspec caption span
+{
+    /*Vai se desprender do texto*/
+    display:block;
+    /*Flutuar a direita*/
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+
+
+aside#lateral
+{
+    display: block;
+    width: 370px;
+    float: right;
+    /*No border-left devo passar tres parametros: a largura, tipo de linha */
+    border-left: 1px solid #606060;
+    padding-left: 25px;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1
+{
+    font-family: 'fonteLogo';
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+
+aside#lateral h2
+{
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+footer#rodape
+{
+    border-top: 1px solid #606060;
+    clear: both;
+}
+
+/*Na minha tag footer com id rodape todos os paragrafos vão obedecer essa estilização*/
+footer#rodape p
+{
+    text-align: center;
+}

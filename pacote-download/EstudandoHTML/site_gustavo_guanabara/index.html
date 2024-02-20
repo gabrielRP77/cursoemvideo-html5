@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--<header pode ser cabeçalho para qualquer coisa, desde o site até do artigo>-->
+<header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo sobre Google Glass</title>
+    <!--Estamos abrindo o arquivo javascript e informando o navegador com language que tipo de arquivo é aquele, porém não é necessário para funcionar, pois por padrão o html reconhece como javascript por ser mais comum-->
+    <script language="javascript" src="javascript/index.js">
+        /*Ao usar a tag script a função em javascript pode ser escrita normalmente
+        function mudaFoto(foto)
+        {
+            document.getElementById("icone").src = foto;
+        }
+        */
+    </script>
+    <!--Link gerara uma ligação entre o arquivo html e o css. O primeiro parâmetro que será passado é o stylesheet ou folha de estilo, que é o css. href significa hypertext reference ou referência hiper texto que é quando vou chamar um arquivo de fora.
+    É permitido omitir o parametro type="text/css" -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+
+        /*body
+        {
+            /*esse código usa outro padrão para definir a cor, sendo ele o hsl: matiz, saturação e luminosidade, além do a que seria a opacidade que pode varia de 0 à 1, sendo 0 invisível e 1 totalmente visivel
+            background-color: hsla(165, 81%, 93%, 0.5);
+            por meio do background-image alteramos o fundo do site para uma imagem escolhida
+            background-image: url("img/imagem_fundo.jpg");
+            Código hexadecimal para a cor azul, esse código faz o fundo do site ficar azul
+            background-color: #a1d3ef;
+            Os dois primeiros números rgb são a quantidade de vermelho, os do meio são quantidade de verde e os últimos de azul
+            background-color: rgb(35, 137, 195);
+            Cor das letras
+            color: red;
+            Há também o rgba, cujo o a seria a opacidade que pode varia de 0 à 1, sendo 0 invisível e 1 totalmente visivel
+            color: rgba(0, 0, 0, 1);
+
+        }
+    {
+        text-align: justify; 
+        text-indent: 50px;
+    }*/
+    </style>
+</header>
+<body>
+    <div id="interface">
+
+        <header id="cabecalho">
+            <!--<hgroup> serve agrupar e um exemplo são as tags <h1> e <h2>-->
+            <hgroup>
+                <!--<h1> serve para hierarquizar os títulos-->
+                <h1>Google Glass</h1>            
+                <h2>“Expectativa razoável”</h2>                
+            </hgroup>
+            <img id="icone" src="https://spng.pngfly.com/20180607/yff/kisspng-google-glass-head-mounted-display-smartglasses-5b1933625f77c0.5310477915283782103911.jpg">
+            <!--container nav que criará uma area de navegação no site, ou seja, tudo que estiver entre ele será o menu de navegação-->
+            
+            <!--Podemos diminuir o tamanho da imagem usando width, porém isso aumenta o tráfego de dados do site e consequentemente exigindo mais do servidor. Podendo ser um serviço mais caro
+            <img src="img/google_glass.jpg" width="200">-->
+            <!--esta imagem teve sua largura alterada no photoshop no editar e tamanho, além de usar o salvar para a web em arquivos. Tudo isso foi feito para diminuir o tamanho do arquivo -->
+            <!--Mesmo que haja uma tag semelhante no resto do código, o css não estilizará por não pertencer a mesma classe-->
+            <!--
+            <figure class="foto-legenda">                
+                <img src="img/google_glass_menor.jpg">
+                <figcaption>
+                    <h3>Google Glass</h3>
+                    <p>Uma nova maneira de ver o mundo.</p>
+                </figurecaption>
+            </figure>
+-->
+            <nav id="menu">
+                <h1>Menu Principal</h1>
+                <!--existem três tipos de ordered lists ou lista ordenada.
+                    o type padrão é o tipo 1, que gera uma lista cardinal crescente para cada item, enquanto o type="a" gerará uma lista em ordem alfabética e se o "a" estiver em caixa alta("A") o resto da letras também estará em caixa alta e ordem alfabética. Caso opte pela letra "i" será dado uma ordem em números romanos e da mesma forma que o alfabeto será mostrado em caixa alta caso seja "A", o "I" também exibirá em caixa alta os números romanos.
+                    o start pode fazer com que a ordem comece a partir do que foi definido como seu valor, porém ele apenas aceita valores númericos, podendo ser utilizado para type="a"
+                    <ol type="a" start="3">
+                        list items ou itens da lista
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="especificacoes.html">Especificações</a></li>
+                        <li><a href="fotos.hml">Fotos</a></li>
+                        <li><a href="multimidia.html">Multimídia<a></li>
+                        <li><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ol>-->
+                <!--unordered lists ou listas desordenada-->
+                <ul>
+                    <li onmouseover="mudaFoto('img/home.png')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="home.html">Home</a></li>
+                    <li onmouseover="mudaFoto('img/especificacoes.jpg')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="especificacoes.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('img/fotos.png')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="fotos.hml">Fotos</a></li>
+                    <li onmouseover="mudaFoto('img/multimida.jpg')" onmouseout="mudafoto('img/oculos_google_glass.jpg')"><a href="multimidia.html">Multimídia<a></li>
+                    <li onmouseover="mudaFoto('img/fale_conosco.png')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="fale-conosco.html">Fale conosco</a></li>
+                </ul>
+            </nav>
+            <!--
+                <nav>
+                <h1>Menu Principal</h1>
+                Será uma lista com demarcadores redondos
+                Caso o type seja definido como square, os demarcadores serão quadrados, se for circle serão pequenos circulos com plano de fundo branco ou valor padrão disc que são circulos com plano de fundo preto
+
+                <ol type="square" >
+                    <li>Home</li>
+                    <li>Especificações</li>
+                    <li>Fotos</li>
+                    <li>Multimídia</li> 
+                    <li>Fale conosco</li>
+                </ol>
+            </nav>
+            -->
+        </header>    
+
+        <section id="corpo">
+            <article id="noticia-principal">
+                <h2>Símbolos Especiais</h2>
+                <p>
+                    <!--Menor que <-->
+                    &lt;
+                    <!--Maior que >-->
+                    &gt;
+                    <!--Menor ou igual a -->
+                    &le;
+                    <!--Maior ou igual a -->
+                    &ge;
+                    <br>
+                    <!--Símbolo de libra-->
+                    &pound;
+                    <!--Símbolo de iene-->
+                    &yen;
+                    <!--Símbolo de euro-->
+                    &euro;  
+                    <br>
+                    <!--Símbolo de copyright-->
+                    &copy;
+                    <!--Símbolo de marca registrada-->
+                    &reg;
+                    <!--Símbolo de trademark-->
+                    &trade;
+                    <br>
+                    <!--Símbolo do permil-->
+                    &permil;
+                    <!--Símbolo de soma-->
+                    &sum;
+                    <!--Símbolo de infinito-->
+                    &infin;
+                    <!--Símbolo de multiplicação-->
+                    &times;
+                    <!--Mais ou menos-->
+                    &plusmn;
+                    <!--Mais dentro de uma circuferência-->
+                    &oplus;
+                    <!--Raiz quadrada-->
+                    &radic;
+                    <!--Símbolo de diferente-->
+                    &ne;
+                    <br>
+                    <!--delta minúsculo-->
+                    &delta;
+                    <!--Delta maiúsculo-->
+                    &Delta;
+                    <!--Lambda-->
+                    &lambda;
+                    <!--Ômega-->
+                    &omega;
+                    <!--Fi-->
+                    &phi;
+                    <br>
+                    <!--Seta para esquerda-->
+                    &larr;
+                    <!--Seta para direita-->
+                    &rarr;
+                    <!--Seta para direita diferente-->
+                    &Rarr;
+                    <!--Seta para cima-->
+                    &uarr;
+                    <!--Seta paara baixo-->
+                    &darr;
+                    <!--Setas para os dois lados-->
+                    &harr;
+                    <br>
+                    <!--Espadas-->
+                    &spades;
+                    <!--Copas-->
+                    &clubs;
+                    <!--Coração-->
+                    &hearts;
+                    <!--Diamantes-->
+                    &diams;
+                </p>
+                <!--Tudo que estiver entre <pre> será pré formatado, ou seja, espaços e enters serão considerados-->
+                <pre>
+                <!--A tag informa ao navegador que aquele é um trecho de código-->
+                <code>
+                    #include &lt;iostream&gt; int main() { cout <<"Olá, Mundo!"; return: 0 ;}
+                </code>
+                </pre>
+                <!--<sub> deixa a palavra subscrita-->
+                <p>Exemplos de<sub>Formatação</sub></p>
+                <!--<sup> deixa a palavra sobrescrita-->
+                <p>Exemplos de<sup>Formatação</sup></p>
+                <!--O <p> serve para formatar textos em parágrafos, contribuindo para a organização do site-->
+                <p>
+                    <!--O &nbsp Non-breaking Space serve para dar espaço sem pular linha e a tag <b> bold deixa em negrito-->
+                    &nbsp; Nos <b>Estados Unidos</b>, casos como esses costumam ser julgados <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segundo um princípio chamado “expectativa razoável”, que define o cenário que as partes envolvidas deveriam esperar em determinadas situações. Quando estamos em grandes ambientes públicos e privados, como aeroportos, avenidas e entradas de hotéis, por exemplo, já existe certo consenso de que nossos movimentos serão monitorados.
+                </p> 
+                <p><!--a tag <i> é utilizada para deixar um texto em itálico, ou seja, apenas inclinado-->
+                    Porém, o <i>padrão</i> se torna mais nebuloso à medida que introduzimos voluntariamente dispositivos e ferramentas que capturam todo tipo de informação a nosso respeito. Isso faz com que situações sociais aparentemente banais, como a ida a um show ou uma conversa entre um casal possam se tornar alvo de discussões e exigir posicionamento das empresas responsáveis.
+                </p>
+                <p><!--A tag <em> inclina as letras assim como o itálico, porém informa o navegador que você quer dar enfâse-->
+                    “<em>Existe</em> um argumento justo de que, se eu tiver instalado esses tipos de dispositivos de escuta em minha casa, não tenho uma expectativa razoável de não interceptação”, disse Lee Tien, um advogado sênior da Electronic Frontier Foundation, à Wired. Dessa forma, a rejeição ao Google Glass, que teve seu uso proibido em bares, restaurantes, e cinemas nos Estados Unidos envolve, além de fatores ligados a seu desenvolvimento, a questão sobre o que ainda entendemos por “expectativa razoável” nestas primeiras décadas do século 21.
+                </p>
+                <p><!--A tag <span> serve para formatar pequenos trechos de texto e a underline é usada para sublinhar os textos,enquanto overline tracejar uma linha acima, line-throught o meio do texto e o none que retira a formatação-->
+                    A <span style="text-decoration: underline;">aceitação</span> dos óculos de realidade virtual e dos assistentes<span style="text-decoration: overline;"> virtuais</span> são um exemplo de incorporação gradual das tecnologias<span style="text-decoration: line-through;"> <span style="text-decoration:none">no</span> cotidiano</span> das pessoas. Seu design e sua interface deixam claro para quem está no mesmo ambiente do usuário que existe um dispositivo daquela ordem em funcionamento. A natureza do Glass em se parecer com uma armação de óculos já levavam a questão para um outro patamar. De certa maneira, as empresas (e o próprio Google) revelam que entenderam o que causou o fracasso dos polêmicos óculos e desenvolveram alternativas para levar a mesma premissa – oferecer conveniência e conectividade por meio de um simples comando – aos usuários de maneiras diferentes.
+                </p>
+                <p><!--Podemos regular o nível de negrito de 1 a 900, usar bold para negrito padrão ou bolder para o máximo de negrito-->
+                    <span style="font-weight: bolder;"> a zona</span> cinzenta não se dissipa, o Google parece ter encontrado uma solução para aproveitar seu alto investimento no Glass, e segue aprimorando a versão para empresas do dispositivo. Em novembro, a homologação da segunda versão do óculos foi registrada na agência de regulação americana, e fontes do site 9to5Google informaram que haverá melhorias na duração da bateria e na qualidade do processamento.
+                </p>
+                <!--Isso é uma tabela-->
+                <table id="tabelaspec">
+                    <!--Esse é o título-->
+                    <caption> Sobremesa Aleatórias: <span>Mar/2013</span></caption>
+                    <!--Essa é uma linha da tabela-->
+                    <tr>
+                        <td rowspan="2" class="ce"> Torta </td>
+                        <td class="cd"> Laranja </td>
+                    </tr>
+                    <!--<td> É uma célula da tabela-->
+                    <tr>
+                        <td class="cd">Maçã</td>
+                    </tr>    
+                    <!--rowspan serve para definir quantas linhas ocupa a célula e no caso a baixo são duas linhas-->
+                    <tr>
+                        <td rowspan="2" class="ce"> Bolo </td>
+                        <td class="cd">  Banana </td>
+                    </tr>
+
+                    <tr>
+                        <td class="cd">Chocolate</td>
+                    </tr>
+                    <!--colspan serve para unir duas colunas-->
+                    <tr>
+                        <td colspan="2" class="NPlanejada">Linha não planejada</td>
+                    </tr>
+                    
+                    <tr>
+                        <td rowspan="2" class="ce"> Mousse </td>
+                        <td class="cd"> Maracujá </td>
+                    </tr>      
+
+                    <tr>
+                        <td class="cd">Morango</td>
+                    </tr>
+                </table>
+                
+                <header id="cabecalho-artigo">
+                
+                    <hgroup>
+                    <!--A ordem dos títulos não altera a ordem que será exibido no navegador-->
+                    <h3>Fracasso do Google glass</h3>
+                    <!--Alinha o texto ao centro-->
+                    <h1 style="text-align: center;">Saiba tudo sobre o Google</h1>
+                    <!--Alinha o texto a esquerda-->
+                    <h2 style="text-align: left;">Por Gabriel Ribeiro Pereira</h2>
+
+                    <h3 class="direita">Atualizado em 23/Fevereiro/2020</h3>
+                    </hgroup>
+
+                </header>    
+                    
+            </article>
+        </section>
+
+        <aside id="lateral">
+            <h1>Outras Notícias</h1>
+            <h2>Vídeo mais recente</h2>
+
+            [AQUI ENTRA UM VÍDEO]
+
+            <h2>Novidades no Glass</h2>
+            <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma</p>
+            
+            <!--O justify alinha o texto tanto na esquerda quanto na direita e o indent da um espaço para começo dos parágrafos-->
+            <p>
+            São Paulo – Entre as razões que explicam o fracasso do Google Glass, os óculos inteligentes do Google, estão as falhas de estratégia da empresa na época de lançamento do produto, além de vários problemas de performance que afastaram os usuários entusiasmados com a ideia. Porém, a grande discussão acerca do dispositivo e de seus similares é, na verdade, sobre privacidade.
+            </p>
+
+            <p>
+            Os óculos inteligentes se baseavam, é claro, em uma câmera acoplada ao dispositivo, que poderia capturar imagens sem que as pessoas próximas ao usuário tivessem consciência disso. Nos idos de 2013, a iniciativa foi bastante comentada, ganhando até uma primeira página no The New York Times.
+            </p>
+            <p><!--wbr é word break row e serve para quebrar a palavra quando ela estiver na borda do navegador, já o &shy; Soft Hyphen serve para fazer o mesmo que o wbr mais o hífen exigido pela norma culta da língua portuguesa-->
+            A resistência de grande parte da sociedade ao amplo uso de instrumentos pneumoultr&shy;amicroscopicos<wbr> silicovulcanoconiótico que poderiam servir para fomentar a vigilância já encerrava ali um capítulo que mal havia se iniciado na era da computação vestível.
+            </p> 
+            <p>
+            Legislação não acompanha velocidade tecnológica
+            Os crescentes debates sobre privacidade têm sido majoritariamente reativos, com grandes nomes do mundo da tecnologia tendo que dar explicações às autoridades sobre casos polêmicos envolvendo a privacidade de seus usuários.
+            </p>
+
+            <p>
+            A maioria dos países não possui uma legislação que previna, de fato, a entrada no mercado de iniciativas que ameacem o controle das pessoas sobre a captura e o uso de imagens e áudios sem uma autorização explícita, assim como a punição adequada para empresas e indivíduos que pratiquem casos de violação. Dessa forma, grande parte das leis em vigor falam sobre um mundo anterior aos smartphones, assistentes virtuais e, claro, óculos inteligentes, criando verdadeiras zonas cinzentas na legislação, como mostra a revista Wired em reportagem.
+            </p>
+
+            <p>
+            As discussões avançam em grande parte dos governos. Neste ano, a União Europeia aprovou uma importante regulação que mobilizou as principais empresas de tecnologia com alcance mundial, que precisaram adaptar às pressas suas políticas de privacidade. O Brasil, assim como outros países da América Latina, aprovou recentemente sua Lei Geral de Proteção de Dados Pessoais, que deve entrar em vigor até o início de 2020.
+            </p>
+
+            <p>
+            O problema da maneira como as legislações são pensadas hoje é que elas podem deixar de fora inúmeros usos e aplicações de tecnologias que estão chegando agora à maioria da população ou que sequer foram criadas.
+            </p>
+
+            <p>
+            Como julgar, por exemplo, um processo de uma pessoa que teve sua imagem ou voz gravada sem o seu consentimento por alguém usando um Google Glass?
+            </p>
+
+            <p>
+            <!--a ancora mais o href serve para abrir uma nova página, uma externa, enquanto o target="_blank" serve para abrir em uma nova aba essa nova página. O valor padrão do target é self, que abre a nova página na mesma aba do seu site-->    
+            Até onde um objeto vestível que captura informações para aprimorar a experiência do usuário pode agir em lugares públicos e privados sem que quem o possui seja penalizado por isso? <a href="https://www.nexojornal.com.br/" target="_blank"><b> ACESSE O NEXO JORNAL</b></a>
+            </p>
+        </aside>
+
+        <footer id="rodape">
+            <p>
+                Copyright &copy; 2013 - by Gustavo Guanabara<br>
+                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a>|<a href="htpp://twitter.com/cursoemvideo" target="_blank">Twitter</a> 
+            </p>
+        </footer>
+</div>  
+</body>
+</html>

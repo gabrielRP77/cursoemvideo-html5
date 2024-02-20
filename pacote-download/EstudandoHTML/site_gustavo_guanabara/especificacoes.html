@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/specs.css">
+    <title>Especificações</title>
+    <style>
+        body
+        {
+            /*esse código usa outro padrão para definir a cor, sendo ele o hsl: matiz, saturação e luminosidade, além do a que seria a opacidade que pode varia de 0 à 1, sendo 0 invisível e 1 totalmente visivel*/
+            background-color: hsla(165, 81%, 93%, 0.5);
+            /*por meio do background-image alteramos o fundo do site para uma imagem escolhida*/
+            background-image: url("img/imagem_fundo.jpg");
+            /*Código hexadecimal para a cor azul, esse código faz o fundo do site ficar azul*/
+            background-color: #a1d3ef;
+            /*Os dois primeiros números rgb são a quantidade de vermelho, os do meio são quantidade de verde e os últimos de azul*/
+            background-color: rgb(35, 137, 195);
+            /*Cor das letras*/
+            color: red;
+            /*Há também o rgba, cujo o a seria a opacidade que pode varia de 0 à 1, sendo 0 invisível e 1 totalmente visivel*/
+            color: rgba(0, 0, 0, 1);
+
+        }
+        p
+        {
+            text-align: justify; 
+            text-indent: 50px;
+        }
+    </style>
+</head>
+<body>
+        <div id="interface">
+    
+            <header id="cabecalho">
+                <!--<hgroup> serve agrupar e um exemplo são as tags <h1> e <h2>-->
+                <hgroup>
+                    <!--<h1> serve para hierarquizar os títulos-->
+                    <h1>Google Glass</h1>            
+                    <h2>“Expectativa razoável”</h2>                
+                </hgroup>
+                <img id="icone" src="https://spng.pngfly.com/20180607/yff/kisspng-google-glass-head-mounted-display-smartglasses-5b1933625f77c0.5310477915283782103911.jpg">
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmouseover="mudaFoto('img/home.png')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="index.html">Home</a></li>
+                        <li onmouseover="mudaFoto('img/especificacoes.jpg')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="especificacoes.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('img/fotos.png')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('img/multimida.jpg')" onmouseout="mudafoto('img/oculos_google_glass.jpg')"><a href="multimidia.html">Multimídia<a></li>
+                        <li onmouseover="mudaFoto('img/fale_conosco.png')" onmouseout="mudaFoto('img/oculos_google_glass.jpg')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Glass >especificações</h3>
+                            <h1>Raios-X no google glass</h1>
+                            <h2>Por Gabriel Ribeiro Pereira</h2>
+                            <h3 class="direita">Atualizado em 03/Maio/2020</h3>
+                        </hgroup>
+                    </header>
+                    <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+                    
+                    <section id="conteudo">
+                        <img src="img/google_glass-marcado.jpg" usemap="#meumapa">
+                        <map name="meumapa">
+                            <!--A área escolhida é um retângulo, onde informo as coordenadas da parte superior e inferior da mesma diagonal-->
+                            <area shape="rect" coords="241,240,343,289" href="google-glass.html#tela" target="janela">
+                            <!--Informo as coordenadas do centro do circulo e o raio-->
+                            <area shape="circle" coords="218,278,9" href="google-glass.html#camera" target="janela">
+                            <area shape="circle" coords="184,282,12" href="google-glass.html#gadgets" target="janela">
+                            <!--Informaremos cada vertice-->
+                            <area shape="poly" coords="78,178,128,244,124,273,76,202" href="google-glass.html#topo" target="janela">
+                        </map>
+                        <iframe src="google-glass.html" scrolling="no" name="janela" id="frame-spec"></iframe>
+                    </section>
+                </article>
+            </section>
+        </div>        
+
+        <footer id="rodape">
+            <p>
+                Copyright &copy; 2013 - by Gustavo Guanabara<br>
+                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a>|<a href="htpp://twitter.com/cursoemvideo" target="_blank">Twitter</a> 
+            </p>
+        </footer>
+</body>
+</html>

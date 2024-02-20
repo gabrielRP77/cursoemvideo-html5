@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+form 
+{ 
+    width: 500px;
+    margin: auto;
+}
+
+/*Para valer tanto com o input e o textarea basta separar os nomes por vírgula*/
+input, textarea
+{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+input:hover, textarea:hover
+{
+    background-color: #dddddd;
+}
+
+legend
+{
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+fieldset
+{
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo
+{
+    width: 150px;
+}
+
+fieldset#usuario
+{
+    /*50% lateral e 10% vertical*/
+    background: url(../img/usuario.jpg) no-repeat 50% 10%;
+}
+
+fieldset#endereco
+{
+    background: url(../img/endereco.jpg) no-repeat 100% 40%;
+}
+
+fieldset#mensagem
+{
+    background: url(../img/mensagem.webp) no-repeat 50% 50%;
+    background-size: 30%;
+}
+
+fieldset#pedido
+{
+    background: url(../img/pedido.jpg) no-repeat 50% 50%;
+    background-size: 80%;
+}

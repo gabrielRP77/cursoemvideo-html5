@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/fotos.css">    
+    <title>Especificações</title>
+    <style>
+        body
+        {
+            /*esse código usa outro padrão para definir a cor, sendo ele o hsl: matiz, saturação e luminosidade, além do a que seria a opacidade que pode varia de 0 à 1, sendo 0 invisível e 1 totalmente visivel*/
+            background-color: hsla(165, 81%, 93%, 0.5);
+            /*por meio do background-image alteramos o fundo do site para uma imagem escolhida*/
+            background-image: url("img/imagem_fundo.jpg");
+            /*Código hexadecimal para a cor azul, esse código faz o fundo do site ficar azul*/
+            background-color: #a1d3ef;
+            /*Os dois primeiros números rgb são a quantidade de vermelho, os do meio são quantidade de verde e os últimos de azul*/
+            background-color: rgb(35, 137, 195);
+            /*Cor das letras*/
+            color: red;
+            /*Há também o rgba, cujo o a seria a opacidade que pode varia de 0 à 1, sendo 0 invisível e 1 totalmente visivel*/
+            color: rgba(0, 0, 0, 1);
+
+        }
+        p
+        {
+            text-align: justify; 
+            text-indent: 50px;
+        }
+    </style>
+
+    <script language="javascript" src="javascript/funcoes.js"></script>
+</head>
+<body>
+        <div id="interface">
+    
+            <header id="cabecalho">
+                <!--<hgroup> serve agrupar e um exemplo são as tags <h1> e <h2>-->
+                <hgroup>
+                    <!--<h1> serve para hierarquizar os títulos-->
+                    <h1>Google Glass</h1>            
+                    <h2>“Expectativa razoável”</h2>                
+                </hgroup>
+                <img id="icone" src="img/fotos.png">
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul>
+                        <li onmouseover="mudaFoto('img/home.png')" onmouseout="mudaFoto('img/fotos.png')"><a href="home.html">Home</a></li>
+                        <li onmouseover="mudaFoto('img/especificacoes.jpg')" onmouseout="mudaFoto('img/fotos.png')"><a href="especificacoes.html">Especificações</a></li>
+                        <li onmouseover="mudaFoto('img/fotos.png')" onmouseout="mudaFoto('img/fotos.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmouseover="mudaFoto('img/multimida.jpg')" onmouseout="mudafoto('img/fotos.png')"><a href="multimidia.html">Multimídia<a></li>
+                        <li onmouseover="mudaFoto('img/fale_conosco.png')" onmouseout="mudaFoto('img/fotos.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Glass > fotos</h3>
+                            <h1>Galeria de Imagens do Google Glass</h1>
+                            <h2>Por Gabriel Ribeiro Pereira</h2>
+                            <h3 class="direita">Atualizado em 03/Maio/2020</h3>
+                        </hgroup>
+                    </header>                    
+<p>Veja a nossa galeria de fotos várias belas imagens que mostram algumas das principais características e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos</p>                    
+
+<ul id="album-fotos"> 
+    <li id="foto01"><span>Agenda e lembretes</span></li>
+    <li id="foto02"><span>Sergey Brin usando o Glass</span></li>
+    <li id="foto03"><span>Leve e compacto</span></li>
+    <li id="foto04"><span>Sensação de uma tela de 50"</span></li>
+    <li id="foto05"><span>Vários tipos de lente</span></li>
+    <li id="foto06"><span>Informações importantes</span></li>
+</ul>
+                </article>
+            </section>
+        </div>        
+
+        <footer id="rodape">
+            <p>
+                Copyright &copy; 2013 - by Gustavo Guanabara<br>
+                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a>|<a href="htpp://twitter.com/cursoemvideo" target="_blank">Twitter</a> 
+            </p>
+        </footer>
+</body>
+</html>

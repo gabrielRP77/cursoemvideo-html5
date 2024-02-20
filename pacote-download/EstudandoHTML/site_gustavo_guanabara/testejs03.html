@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JavaScript</title>
+    <script>
+        /*var é uma variavel em JavaScript com o nome quebrada recebendo o valor false. Ela servira como base para a maquina de estado, indicando uma vez quebrada que não é para ela fazer nenhuma atividade. Por estar fora da função, ela é uma variavel global*/
+        var quebrada = false;
+        /*A variavel tipo vai receber o valor passado quando chamou a função*/
+        function mudaLampada(tipo)
+        {
+            /*Se o valor de tipo for igual a 1, é executado as ações dentro da condicional if*/
+            /*Com a finalidade de simplicar o código, tudo abaixo estará comentado*/
+            /*if (tipo == 1)
+            {
+                arquivo = "https://wchristianeletrotecnica.files.wordpress.com/2011/04/lmpada.jpg";
+            }
+            if (tipo == 2)
+           {
+               arquivo = "https://www.starlux.com.br/wp-content/uploads/2019/05/2798_filamento_led_a19_apagada_starlux_principal.png";
+           } 
+           if (tipo == 3)
+           {
+               arquivo = "https://1.bp.blogspot.com/-SnSMdLFxrcw/Th3w1olo0oI/AAAAAAAAAD8/mlSzt0lWs3A/s1600/lampada_quebrada.jpg";
+           }
+           Caso esteja quebrada, a imagem não sera atualizada*/
+           if (!quebrada)
+           {
+                 /*variavel arquivo passa a imagem desejada para que se faça a alteração do arquivo html*/
+                document.getElementById("luz").src = "img/" + tipo + ".jpg";
+                document.getElementById("luz").style = "width: 200px; height: 250px;";
+                /*Mudança de valor da variavel quebrada para true, para que assim não seja possivel novas atualizações da imagem*/
+                if (tipo == 'lampada_quebrada')
+                {
+                    quebrada = true;
+                }
+           }
+        }
+    </script>
+</head>
+<body>
+    <h1>Acenda a lâmpada</h1>
+    <!--Ao chamar a função pelo evento de mover o mouse por cima onmousemove="mudaLampada()" podemos passar parametos para definir qual linha de codigo queremos desencadear dentro do parêntese exemplo: onmousemove="mudaLampada(1)"-->
+    <!--Ao acionar o evento, este passa o nome do arquivo a ser exibido-->
+    <img style="width: 200px; height: 250px;" src="img/lampada_apagada.jpg" id="luz" onmousemove="mudaLampada('lampada_acesa')" onmouseout="mudaLampada('lampada_apagada')" onclick="mudaLampada('lampada_quebrada')">
+</body>
+</html>
